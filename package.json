@@ -2,10 +2,10 @@
   "name": "Meita_Multi",
   "version": "1.0.0",
   "description": "My-Love-Meita_Multi-Device",
-  "main": "index",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "Thunder Team",
