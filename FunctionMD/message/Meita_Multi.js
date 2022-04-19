@@ -2642,8 +2642,6 @@ meita.sendMessage(from, teks_vote1, m)
             if (wasVote) throw reply('Kamu Sudah Vote')
           vote[from][1].push(m.sender)
           var  menvote = vote[from][1].concat(vote[from][2])
-          setTimeout( () => {
-            reply(`waktu Habis\n [ UPVOTE ] • Total: ${vote[from][1].length}\n  [ DEVOTE ]• Total: ${vote[from][2].length}`)
            var teks_vote = `*「 VOTE 」*
 
 *Alasan:* ${vote[from][0]} dari${vote.map((v) => `@${v.split`@`[0]}`)}
@@ -2672,6 +2670,18 @@ ${vote[from][2].map((v, i) => `• ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                 mentions: menvote
              }
             meita.sendMessage(from, buttonMessageUpvote)
+          setTimeout( () => {
+            reply(`*「 VOTE 」*
+
+*Alasan:* ${vote[from][0]} dari${vote.map((v) => `@${v.split`@`[0]}`)}
+            
+[ UPVOTE ]
+• Total: ${vote[from][1].length}
+${vote[from][1].map((v, i) => `• ${i + 1}. @${v.split`@`[0]}`).join('\n')}
+            
+[ DEVOTE ]
+• Total: ${vote[from][2].length}
+${vote[from][2].map((v, i) => `• ${i + 1}. @${v.split`@`[0]}`).join('\n')}`)
 	       }, 5000)}
              break
                 case 'devote': {
